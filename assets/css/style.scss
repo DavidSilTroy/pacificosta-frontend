@@ -27,12 +27,27 @@ body {
     width: 70vw;
 }
 
+header .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    right: 0%;
+    //background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1;
+    text-align: center;
+    h2 {
+        font-size: 11vw;
+    }
+}
+
 #pacificosta-nav-mobile {
     position: fixed;
     color: white;
     background-color: $color-1;
     z-index: 1000;
-    top: 100vh;
+    top: -110vh;
     width: 100vw;
     height: 100vh;
     padding-bottom: 10vw;
@@ -58,21 +73,6 @@ body {
     }
 }
 
-header .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0%;
-    right: 0%;
-    //background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    z-index: 1;
-    text-align: center;
-    h2 {
-        font-size: 11vw;
-    }
-}
-
 .pacificosta-social-links {
     margin-top: 10vw;
     width: 100vw;
@@ -84,8 +84,10 @@ header .overlay {
 .pacificosta-hamb-menu {
     position: fixed;
     width: 60px;
-    right: 5vw;
-    bottom: 5vw;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 5vw;
+    margin-right: 5vw;
     z-index: 10000;
     img {
         // filter: blur(1vw);
@@ -104,5 +106,56 @@ header .overlay {
     }
     #h-lines-img {
         display: block;
+    }
+}
+
+#pacificosta_come-to-Ecuador {
+    h2 {
+        text-align: center;
+    }
+    h4 {
+        text-align: center;
+    }
+    img {
+        width: 80vw;
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #pacificosta-letters-nav-img,
+    #pacificosta-letters-img {
+        width: 70vw;
+        margin-top: 10vw;
+    }
+    #pacificosta-letters-img {
+        margin-bottom: 5vw;
+    }
+    #pacificosta-logo-img {
+        width: 60vw;
+    }
+    header .overlay {
+        h2 {
+            font-size: 11vw;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #pacificosta-letters-nav-img,
+    #pacificosta-letters-img {
+        width: 50vw;
+        margin-top: 4vw;
+    }
+    #pacificosta-letters-img {
+        margin-bottom: 2vw;
+    }
+    #pacificosta-logo-img {
+        width: 25vw;
+    }
+    header .overlay {
+        h2 {
+            font-size: 3vw;
+        }
     }
 }
