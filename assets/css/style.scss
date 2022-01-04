@@ -81,7 +81,7 @@ body {
     text-align: center;
     height: 100vh;
     img {
-        margin-top: 25vh;
+        margin-top: 30vh;
         width: 60vw;
     }
     h2 {
@@ -178,70 +178,69 @@ body {
 //Section: Come to Ecuador
 #pacificosta_come-to-Ecuador {
     $img_width: 70vw;
-    $img_height: 70vw;
-    $arrow_width: 10vw;
-    height: $img_height*1.6;
+    $img_height: $img_width;
+    $new_img_width: $img_width*1.2;
+    $new_img_height: $img_height*1.1;
+    $arrow_width: $img_height/6;
+    height: $new_img_height*1.3;
     #pacificosta_carrousel {
         width: 100%;
-        height: 30vh;
         .imgs-to-show {
             img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-                // margin-left: auto;
-                // margin-right: auto;
             }
-            .carrousel-div-left,
             .carrousel-div-center,
+            .carrousel-div-left,
             .carrousel-div-right {
-                position: absolute;
-                margin-top: 2vh;
-                background-color: #162944;
-                width: $img_width;
-                height: $img_height;
+                position: relative;
+                height: 0;
+                img {
+                    width: $img_width;
+                    height: $img_height;
+                }
+            }
+            .carrousel-div-right {
+                left: 100vw - $img_width;
             }
             .carrousel-div-left {
                 left: 0;
+                margin-top: ($img_width*1.05)-$img_width;
             }
             .carrousel-div-center {
                 margin-top: 0;
-                $new_img_width: $img_width*1.2;
-                $new_img_height: $img_height*1.1;
-                width: $new_img_width;
-                height: $new_img_height;
                 left: 50vw-($new_img_width/2);
                 z-index: 10;
-            }
-            .carrousel-div-right {
-                right: 0;
+                img {
+                    width: $new_img_width;
+                    height: $new_img_height;
+                }
             }
         }
         .arrow-right,
         .arrow-left {
-            position: absolute;
+            position: relative;
+            height: 0;
             z-index: 15;
-            // top: $img_height/2;
             i {
                 color: transparent;
                 position: absolute;
                 width: $arrow_width;
                 height: $arrow_width;
-                top: $img_height/2;
+                top: ($new_img_height/2) - ($arrow_width/2);
                 background-repeat: no-repeat;
                 background-size: $arrow_width $arrow_width;
             }
         }
         .arrow-left {
-            left: 6vw;
-            height: $arrow_width;
+            left: 50vw -($new_img_width/2);
             i {
                 background-image: url(../img/arrow-left.svg);
             }
         }
         .arrow-right {
-            left: $img_width*1.2;
-            height: $arrow_width;
+            left: 50vw + ($new_img_width/2) -$arrow_width;
             i {
                 background-image: url(../img/arrow-right.svg);
             }
@@ -277,6 +276,8 @@ body {
 }
 
 //section: Where to go
+#pacificosta_where-to-go {}
+
 //Footer
 footer {
     background-color: $color-1;
@@ -290,39 +291,209 @@ footer {
 }
 
 @media screen and (min-width: 600px) {
-    #pacificosta-letters-nav-img,
-    #pacificosta-letters-img {
-        width: 70vw;
-        margin-top: 10vw;
+    .section-title-1 {
+        margin: 6vh auto 0 auto;
+        font-size: 4.5vw;
+        font-weight: 750;
     }
-    #pacificosta-letters-img {
-        margin-bottom: 5vw;
+    .section-title-2 {
+        margin: 0 auto 4vh auto;
+        font-size: 2.8vw;
     }
-    #pacificosta-logo-img {
-        width: 60vw;
-    }
-    header .overlay {
+    .intro-information {
+        text-align: center;
+        height: 100vh;
+        img {
+            margin-top: 22vh;
+            width: 40vw;
+        }
         h2 {
-            font-size: 11vw;
+            color: aliceblue;
+            font-weight: 730;
+            font-size: 6.5vw;
+        }
+    }
+    //Section: Come to Ecuador
+    #pacificosta_come-to-Ecuador {
+        $img_width: 60vw;
+        $img_height: $img_width*0.7;
+        $new_img_width: $img_width*1.2;
+        $new_img_height: $img_height*1.1;
+        $arrow_width: $img_height/6;
+        height: $new_img_height*1.45;
+        #pacificosta_carrousel {
+            .imgs-to-show {
+                .carrousel-div-center,
+                .carrousel-div-left,
+                .carrousel-div-right {
+                    img {
+                        width: $img_width;
+                        height: $img_height;
+                    }
+                }
+                .carrousel-div-right {
+                    left: 100vw - $img_width;
+                }
+                .carrousel-div-left {
+                    margin-top: ($img_width*1.035)-$img_width;
+                }
+                .carrousel-div-center {
+                    left: 50vw-($new_img_width/2);
+                    img {
+                        width: $new_img_width;
+                        height: $new_img_height;
+                    }
+                }
+            }
+            .arrow-right,
+            .arrow-left {
+                i {
+                    width: $arrow_width;
+                    height: $arrow_width;
+                    top: ($new_img_height/2) - ($arrow_width/2);
+                    background-size: $arrow_width $arrow_width;
+                }
+            }
+            .arrow-left {
+                left: 50vw -($new_img_width/2);
+                i {
+                    background-image: url(../img/arrow-left.svg);
+                }
+            }
+            .arrow-right {
+                left: 50vw + ($new_img_width/2) -$arrow_width;
+                i {
+                    background-image: url(../img/arrow-right.svg);
+                }
+            }
+        }
+    }
+    //Section: Traveling
+    #pacificosta_traveling-with {
+        .pacificosta-show_traveling {
+            margin-top: 3vh;
+        }
+        .pacificosta_traveling-box {
+            $img_w: 95vw/2;
+            height: $img_w;
+            h4 {
+                top: -$img_w/2*1.15;
+            }
+        }
+    }
+    //Footer
+    footer {
+        background-color: $color-1;
+        color: aliceblue;
+        margin-bottom: -3vh;
+        text-align: center;
+        img {
+            width: 12vw;
+            margin: 2vh auto 0 auto;
         }
     }
 }
 
-@media screen and (min-width: 1024px) {
-    #pacificosta-letters-nav-img,
-    #pacificosta-letters-img {
-        width: 50vw;
-        margin-top: 4vw;
+@media screen and (min-width: 1000px) {
+    .section-title-1 {
+        margin: 6vh auto 0 auto;
+        font-size: 3.5vw;
+        font-weight: 750;
     }
-    #pacificosta-letters-img {
-        margin-bottom: 2vw;
+    .section-title-2 {
+        margin: 0 auto 4vh auto;
+        font-size: 2vw;
     }
-    #pacificosta-logo-img {
-        width: 25vw;
-    }
-    header .overlay {
+    .intro-information {
+        text-align: center;
+        height: 100vh;
+        img {
+            margin-top: 25vh;
+            width: 30vw;
+        }
         h2 {
-            font-size: 3vw;
+            color: aliceblue;
+            font-weight: 730;
+            font-size: 5.5vw;
+        }
+    }
+    //Section: Come to Ecuador
+    #pacificosta_come-to-Ecuador {
+        $img_width: 60vw;
+        $img_height: $img_width*0.6;
+        $new_img_width: $img_width*1.2;
+        $new_img_height: $img_height*1.1;
+        $arrow_width: $img_height/6;
+        height: $new_img_height*1.45;
+        #pacificosta_carrousel {
+            .imgs-to-show {
+                .carrousel-div-center,
+                .carrousel-div-left,
+                .carrousel-div-right {
+                    img {
+                        width: $img_width;
+                        height: $img_height;
+                    }
+                }
+                .carrousel-div-right {
+                    left: 100vw - $img_width;
+                }
+                .carrousel-div-left {
+                    margin-top: ($img_width*1.035)-$img_width;
+                }
+                .carrousel-div-center {
+                    left: 50vw-($new_img_width/2);
+                    img {
+                        width: $new_img_width;
+                        height: $new_img_height;
+                    }
+                }
+            }
+            .arrow-right,
+            .arrow-left {
+                i {
+                    width: $arrow_width;
+                    height: $arrow_width;
+                    top: ($new_img_height/2) - ($arrow_width/2);
+                    background-size: $arrow_width $arrow_width;
+                }
+            }
+            .arrow-left {
+                left: 50vw -($new_img_width/2);
+                i {
+                    background-image: url(../img/arrow-left.svg);
+                }
+            }
+            .arrow-right {
+                left: 50vw + ($new_img_width/2) -$arrow_width;
+                i {
+                    background-image: url(../img/arrow-right.svg);
+                }
+            }
+        }
+    }
+    //Section: Traveling
+    #pacificosta_traveling-with {
+        .pacificosta-show_traveling {
+            margin-top: 3vh;
+        }
+        .pacificosta_traveling-box {
+            $img_w: 95vw/2;
+            height: $img_w;
+            h4 {
+                top: -$img_w/2*1.15;
+            }
+        }
+    }
+    //Footer
+    footer {
+        background-color: $color-1;
+        color: aliceblue;
+        margin-bottom: -3vh;
+        text-align: center;
+        img {
+            width: 8vw;
+            margin: 2vh auto 0 auto;
         }
     }
 }
