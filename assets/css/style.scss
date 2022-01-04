@@ -41,6 +41,64 @@ body {
     height: 0;
 }
 
+.pacificosta-navbar-1 {
+    height: 15vh;
+    box-shadow: none;
+    background-color: transparent;
+    transition: all, 0.3s;
+    transition: background-color, 0.2s;
+    .brand-logo {
+        img {
+            width: 80vw;
+            margin-top: 3vh;
+        }
+    }
+}
+
+.pacificosta-navbar-2 {
+    height: 10vh;
+    box-shadow: none;
+    background-color: $color-1;
+    transition: all, 0.5s;
+    .brand-logo {
+        img {
+            width: 50vw;
+            margin-top: 2vh;
+        }
+    }
+}
+
+.show-nav-mobile {
+    position: absolute;
+    z-index: 90;
+    top: -150vh;
+    opacity: 0;
+    display: inline-block;
+    background-color: $color-1;
+    height: 100vh;
+    li {
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        margin: 1.5vh auto 1.5vh auto;
+        a {
+            font-size: 2rem;
+            font-weight: 650;
+        }
+    }
+    .pacificosta-logo {
+        img {
+            margin-top: 3vh;
+            width: 80vw;
+        }
+    }
+    .pacificosta-social-links {
+        img {
+            width: 25vw;
+        }
+    }
+}
+
 .title-line {
     text-align: center;
     display: flex;
@@ -91,6 +149,15 @@ body {
     }
 }
 
+.pacificosta-cut_bg {
+    position: absolute;
+    top: +100vh;
+    margin-top: -(100vw)/14.3;
+    img {
+        width: 100vw;
+    }
+}
+
 .pacificosta-hamb-menu {
     position: fixed;
     width: 60px;
@@ -114,65 +181,6 @@ body {
     #h-lines-img {
         display: block;
     }
-}
-
-.pacificosta-navbar-1 {
-    height: 15vh;
-    box-shadow: none;
-    background-color: transparent;
-    img {
-        width: 80vw;
-        margin-top: 5vh;
-    }
-}
-
-.pacificosta-navbar-2 {
-    height: 10vh;
-    box-shadow: none;
-    background-color: $color-1;
-    img {
-        width: 50vw;
-        margin-top: 2vh;
-    }
-}
-
-#pacificosta-nav-mobile {
-    position: fixed;
-    color: white;
-    background-color: $color-1;
-    z-index: 1000;
-    top: -110vh;
-    width: 100vw;
-    height: 100vh;
-    padding-bottom: 10vw;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 8vw;
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        li {
-            margin: 2vw;
-            padding: 2vw;
-            a {
-                text-decoration: none;
-                color: aliceblue;
-                font-weight: 600;
-            }
-        }
-    }
-    #pacificosta-letters-nav-img {
-        margin-bottom: 5vw;
-    }
-}
-
-.pacificosta-social-links {
-    margin-top: 10vw;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 //Section: Come to Ecuador
@@ -313,6 +321,24 @@ footer {
             font-size: 6.5vw;
         }
     }
+    .pacificosta-navbar-1 {
+        height: 15vh;
+        box-shadow: none;
+        background-color: transparent;
+        img {
+            width: 65vw;
+            margin-top: 5vh;
+        }
+    }
+    .pacificosta-navbar-2 {
+        height: 10vh;
+        box-shadow: none;
+        background-color: $color-1;
+        img {
+            width: 40vw;
+            margin-top: 2vh;
+        }
+    }
     //Section: Come to Ecuador
     #pacificosta_come-to-Ecuador {
         $img_width: 60vw;
@@ -417,6 +443,26 @@ footer {
             font-size: 5.5vw;
         }
     }
+    .pacificosta-navbar-1 {
+        height: 15vh;
+        box-shadow: none;
+        background-color: transparent;
+        img {
+            width: 35vw;
+            margin-top: 2vh;
+            margin-left: 3vw;
+        }
+    }
+    .pacificosta-navbar-2 {
+        height: 10vh;
+        box-shadow: none;
+        background-color: $color-1;
+        img {
+            width: 15vw;
+            margin-top: 1vh;
+            margin-left: 2vw;
+        }
+    }
     //Section: Come to Ecuador
     #pacificosta_come-to-Ecuador {
         $img_width: 60vw;
@@ -487,12 +533,60 @@ footer {
     }
     //Footer
     footer {
-        background-color: $color-1;
-        color: aliceblue;
-        margin-bottom: -3vh;
-        text-align: center;
         img {
             width: 8vw;
+            margin: 2vh auto 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section-title-1 {
+        margin: 6vh auto 0 auto;
+        font-size: 2.5vw;
+        font-weight: 750;
+    }
+    .section-title-2 {
+        margin: 0 auto 4vh auto;
+        font-size: 1.5vw;
+    }
+    .intro-information {
+        text-align: center;
+        height: 100vh;
+        img {
+            margin-top: 25vh;
+            width: 25vw;
+        }
+        h2 {
+            color: aliceblue;
+            font-weight: 730;
+            font-size: 4.5vw;
+        }
+    }
+    .pacificosta-navbar-1 {
+        height: 15vh;
+        box-shadow: none;
+        background-color: transparent;
+        img {
+            width: 35vw;
+            margin-top: 2vh;
+            margin-left: 3vw;
+        }
+    }
+    .pacificosta-navbar-2 {
+        height: 10vh;
+        box-shadow: none;
+        background-color: $color-1;
+        img {
+            width: 15vw;
+            margin-top: 1vh;
+            margin-left: 2vw;
+        }
+    }
+    //Footer
+    footer {
+        img {
+            width: 5vw;
             margin: 2vh auto 0 auto;
         }
     }
