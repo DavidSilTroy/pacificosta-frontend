@@ -1,593 +1,341 @@
-$color-1: #162944;
-$color-2: #009877;
-html,
+$color-1:#162944;
+$color-2:#009877;
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
-    max-width: 100%;
-    h2,
-    h4 {
-        text-align: center;
-        color: $color-2;
-    }
 }
 
-.b-color-0 {
-    background-color: transparent;
+.pacificosta-navbar-brand {
+    width: 10vw;
+    color: #fff;
+    filter: invert(100%) sepia(79%) saturate(0%) hue-rotate(86deg) brightness(118%) contrast(119%);
 }
 
-.b-color-1 {
-    background-color: $color-1;
+.pacificosta-color-1 {
+    color: #162944;
 }
 
-.b-color-2 {
-    background-color: $color-2;
+.pacificosta-color-2 {
+    color: #009877;
 }
 
-.section-title-1 {
-    margin: 6vh auto 0 auto;
-    font-size: 5.5vw;
-    font-weight: 750;
+.pacificosta-bg-color-1 {
+    background-color: #162944;
+    color: #fff;
 }
 
-.section-title-2 {
-    margin: 0 auto 4vh auto;
-    font-size: 3.8vw;
+.pacificosta-bg-color-2 {
+    background-color: #009877;
+    color: #fff;
 }
 
-.navbar-fixed {
-    height: 0;
-}
-
-.pacificosta-navbar-1 {
-    height: 15vh;
-    box-shadow: none;
-    background-color: transparent;
-    transition: all, 0.3s;
-    transition: background-color, 0.2s;
-    .brand-logo {
-        img {
-            width: 80vw;
-            margin-top: 3vh;
-        }
-    }
-}
-
-.pacificosta-navbar-2 {
-    height: 10vh;
-    box-shadow: none;
-    background-color: $color-1;
-    transition: all, 0.5s;
-    .brand-logo {
-        img {
-            width: 50vw;
-            margin-top: 2vh;
-        }
-    }
-}
-
-.show-nav-mobile {
-    position: absolute;
-    z-index: 90;
-    top: -150vh;
-    opacity: 0;
-    display: inline-block;
-    background-color: $color-1;
-    height: 100vh;
-    li {
-        text-transform: uppercase;
-        width: 100%;
-        text-align: center;
-        margin: 1.5vh auto 1.5vh auto;
-        a {
-            font-size: 2rem;
-            font-weight: 650;
-        }
-    }
-    .pacificosta-logo {
-        img {
-            margin-top: 3vh;
-            width: 80vw;
-        }
-    }
-    .pacificosta-social-links {
-        img {
-            width: 25vw;
-        }
-    }
-}
-
-.title-line {
-    text-align: center;
+.pacificosta-card-text {
     display: flex;
     align-items: center;
-    &:before,
-    &:after {
-        content: " ";
-        flex: 1 0 0%;
-        height: 1px;
-        background: $color-2;
-        margin: 0 0.1rem 0 5vw;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        width: fit-content;
     }
-    &:after {
-        margin: 0 5vw 0 0.1rem;
+    p {
+        margin-left: auto;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+.btn-outline-primary {
+    color: #009877;
+    border-color: #009877;
+    &:hover {
+        color: #fff;
+        background-color: #009877;
+        border-color: #009877;
+    }
+}
+
+.btn-outline-white {
+    color: #fff;
+    border-color: #fff;
+    &:hover {
+        color: #009877 !important;
+        background-color: #fff;
+        border-color: #fff;
+    }
+}
+
+.btn-lines {
+    overflow: hidden;
+    span {
+        position: relative;
+        display: inline-block;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            border-bottom: 0.3em solid;
+            border-color: #009877;
+            width: 100vw;
+            margin: 0 20px;
+        }
+        &::before {
+            right: 100%;
+        }
+        &::after {
+            left: 100%;
+        }
+    }
+}
+
+#pacificosta-navbar {
+    transition: background-color 0.2s ease-out;
+    ul {
+        li {
+            margin-left: 5vw;
+            font-weight: 700;
+        }
+    }
+}
+
+#pacificosta-hero {
+    .carousel-item {
+        height: 100vh;
+        img {
+            object-fit: cover;
+            width: 100%;
+        }
+        .carousel-caption {
+            img {
+                width: 70vw;
+            }
+        }
+    }
+}
+
+#pacificosta-promotions {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    .pacificosta-panel {
+        $margin_in_x: 8vw;
+        $color-for-border: #009877;
+        $vertical-border-height: 6em;
+        $img-width: 40vw;
+        $top-space: 10vh;
+        margin: $margin_in_x 0 $margin_in_x 0;
+        padding: 1vh;
+        padding-top: $top-space;
+        border-top: 5px solid $color-for-border;
+        border-bottom: 5px solid $color-for-border;
+        position: relative;
+        height: ($img-width*1.06);
+        // border-radius: 5px;
+        .panel-images {
+            height: $img-width*0.6;
+            .pacificosta-promotion-in-panel {
+                background-color: #4f4f4f;
+                transition-timing-function: ease-out;
+                position: relative;
+                width: $img-width;
+                height: $img-width*0.8;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .pacificosta-promotion-information {
+                    // margin: 1vw;
+                    width: 80%;
+                    margin-left: 10%;
+                    margin-top: 12%;
+                    height: 60%;
+                    position: absolute;
+                    top: 0;
+                    color: #fff;
+                    border: #fff solid 0.1em;
+                    border-radius: 0.3em;
+                    background: hsla(0, 0%, 16%, 0.089);
+                    backdrop-filter: blur(0.5em);
+                    h2 {
+                        font-weight: 700;
+                    }
+                    h2,
+                    p {
+                        text-shadow: 0 0 1px #000;
+                    }
+                }
+                &:nth-of-type(3),
+                &:first-of-type {
+                    position: absolute;
+                    z-index: 1;
+                    top: $top-space;
+                    scale: 0.8;
+                }
+                &:nth-of-type(3) {
+                    left: 55%;
+                }
+                &:first-of-type {
+                    right: 55%;
+                }
+                &:nth-of-type(2) {
+                    scale: 1;
+                    position: relative;
+                    margin: auto;
+                    z-index: 3;
+                }
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                height: $vertical-border-height;
+                border-left: 5px solid $color-for-border;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                height: $vertical-border-height;
+                border-left: 5px solid $color-for-border;
+            }
+        }
+        .panel-control {
+            ul {
+                position: absolute;
+                width: 100%;
+                padding: 0;
+                bottom: 0;
+                list-style: none;
+                li {
+                    display: inline;
+                    margin-inline: 0.5em;
+                    a.panel-option,
+                    a.panel-option-selected {
+                        border: solid;
+                        border-color: $color-2;
+                        border-radius: 50%;
+                        display: inline-block;
+                    }
+                    a.panel-option-selected {
+                        background-color: $color-2;
+                    }
+                    a.btn-show-left-option,
+                    a.btn-show-right-option {
+                        cursor: pointer;
+                        width: 1em;
+                        height: 1em;
+                        margin-inline: 0.5em;
+                        border-top: 0.5em solid transparent;
+                        border-bottom: 0.5em solid transparent;
+                        display: inline-block;
+                    }
+                    a.btn-show-left-option {
+                        border-right: 0.8em solid $color-2;
+                    }
+                    a.btn-show-right-option {
+                        border-left: 0.8em solid $color-2;
+                    }
+                    a {
+                        text-decoration: none;
+                        width: 1em;
+                        height: 1em;
+                    }
+                }
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                height: $vertical-border-height;
+                border-left: 5px solid $color-for-border;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                right: 0;
+                height: $vertical-border-height;
+                border-left: 5px solid $color-for-border;
+            }
+        }
+    }
+}
+
+#pacificosta-tours {
+    h2,
+    h4 {
+        font-weight: 700;
+    }
+}
+
+#pacificosta-contact-us {
+    background-image: url("../img/contact_us-bg.png");
+    padding: 10vh 15vw 10vh 15vw;
+    .pacificosta-card-contact {
+        border: #fff solid;
+        padding: 5vh 1.5vw 5vh 1.5vw;
+        background: hsla(0, 0%, 100%, 0.055);
+        backdrop-filter: blur(0.5em);
     }
     h1,
     h2,
     h3,
     h4 {
-        margin: 0;
+        color: #fff;
+        font-weight: 700;
     }
-}
-
-.intro-background {
-    position: relative;
-    height: 0;
-    z-index: -1;
-    img {
-        width: 100%;
-        height: 100vh;
-        margin: 0;
-        object-fit: cover;
-        object-position: 63% 100%;
-    }
-}
-
-.intro-information {
-    text-align: center;
-    height: 100vh;
-    img {
-        margin-top: 30vh;
-        width: 60vw;
-    }
-    h2 {
-        color: aliceblue;
-        font-weight: 730;
-        font-size: 11vw;
-    }
-}
-
-.pacificosta-cut_bg {
-    position: absolute;
-    top: +100vh;
-    margin-top: -(100vw)/14.3;
-    img {
-        width: 100vw;
-    }
-}
-
-.pacificosta-hamb-menu {
-    position: fixed;
-    width: 60px;
-    right: 0;
-    bottom: 0;
-    margin-bottom: 5vw;
-    margin-right: 5vw;
-    z-index: 10000;
-    img {
-        background-color: #ffffff36;
-        backdrop-filter: blur(1vw);
-        border-width: 0.4vw;
-        border-radius: 50px;
-        width: 60px;
-        margin: 0;
-        padding: 0;
-    }
-    #x-exit-img {
-        display: none;
-    }
-    #h-lines-img {
-        display: block;
-    }
-}
-
-//Section: Come to Ecuador
-#pacificosta_come-to-Ecuador {
-    $img_width: 70vw;
-    $img_height: $img_width;
-    $new_img_width: $img_width*1.2;
-    $new_img_height: $img_height*1.1;
-    $arrow_width: $img_height/6;
-    height: $new_img_height*1.3;
-    #pacificosta_carrousel {
-        width: 100%;
-        .imgs-to-show {
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-            .carrousel-div-center,
-            .carrousel-div-left,
-            .carrousel-div-right {
-                position: relative;
-                height: 0;
-                img {
-                    width: $img_width;
-                    height: $img_height;
-                }
-            }
-            .carrousel-div-right {
-                left: 100vw - $img_width;
-            }
-            .carrousel-div-left {
-                left: 0;
-                margin-top: ($img_width*1.05)-$img_width;
-            }
-            .carrousel-div-center {
-                margin-top: 0;
-                left: 50vw-($new_img_width/2);
-                z-index: 10;
-                img {
-                    width: $new_img_width;
-                    height: $new_img_height;
-                }
-            }
-        }
-        .arrow-right,
-        .arrow-left {
-            position: relative;
-            height: 0;
-            z-index: 15;
-            i {
-                color: transparent;
-                position: absolute;
-                width: $arrow_width;
-                height: $arrow_width;
-                top: ($new_img_height/2) - ($arrow_width/2);
-                background-repeat: no-repeat;
-                background-size: $arrow_width $arrow_width;
-            }
-        }
-        .arrow-left {
-            left: 50vw -($new_img_width/2);
-            i {
-                background-image: url(../img/arrow-left.svg);
-            }
-        }
-        .arrow-right {
-            left: 50vw + ($new_img_width/2) -$arrow_width;
-            i {
-                background-image: url(../img/arrow-right.svg);
+    ul {
+        list-style: none;
+        li {
+            color: #fff;
+            margin-top: 2vh;
+            a {
+                text-decoration: none;
+                color: #fff;
             }
         }
     }
 }
 
-//Section: Traveling
-#pacificosta_traveling-with {
-    .pacificosta-show_traveling {
-        margin-top: 3vh;
-    }
-    .pacificosta_traveling-box {
-        $img_w: 95vw;
-        height: $img_w;
-        img {
-            width: 100%;
-            height: 90%;
-            object-fit: cover;
-            border-radius: 15px;
-            //filter: grayscale(0.1);
-        }
-        h4 {
-            color: aliceblue;
-            text-shadow: 1px 1px 1px #000;
-            text-shadow: #162944;
-            font-weight: 750;
-            height: 0;
-            position: relative;
-            top: -$img_w/2*1.15;
-        }
+#pacificosta-footer {
+    a {
+        text-decoration: none;
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
     }
 }
 
-//section: Where to go
-#pacificosta_where-to-go {}
+//Another code
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler .fa-bars {
+    color: #fff;
+}
 
-//Footer
-footer {
+
+/* Color of the links AFTER scroll */
+
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler .fa-bars {
+    color: #fff;
+}
+
+
+/* Color of the navbar AFTER scroll */
+
+.navbar-scrolled {
     background-color: $color-1;
-    color: aliceblue;
-    margin-bottom: -3vh;
-    text-align: center;
-    img {
-        width: 20vw;
-        margin: 2vh auto 0 auto;
-    }
 }
 
-@media screen and (min-width: 600px) {
-    .section-title-1 {
-        margin: 6vh auto 0 auto;
-        font-size: 4.5vw;
-        font-weight: 750;
-    }
-    .section-title-2 {
-        margin: 0 auto 4vh auto;
-        font-size: 2.8vw;
-    }
-    .intro-information {
-        text-align: center;
-        height: 100vh;
-        img {
-            margin-top: 22vh;
-            width: 40vw;
-        }
-        h2 {
-            color: aliceblue;
-            font-weight: 730;
-            font-size: 6.5vw;
-        }
-    }
-    .pacificosta-navbar-1 {
-        height: 15vh;
-        box-shadow: none;
-        background-color: transparent;
-        img {
-            width: 65vw;
-            margin-top: 5vh;
-        }
-    }
-    .pacificosta-navbar-2 {
-        height: 10vh;
-        box-shadow: none;
-        background-color: $color-1;
-        img {
-            width: 40vw;
-            margin-top: 2vh;
-        }
-    }
-    //Section: Come to Ecuador
-    #pacificosta_come-to-Ecuador {
-        $img_width: 60vw;
-        $img_height: $img_width*0.7;
-        $new_img_width: $img_width*1.2;
-        $new_img_height: $img_height*1.1;
-        $arrow_width: $img_height/6;
-        height: $new_img_height*1.45;
-        #pacificosta_carrousel {
-            .imgs-to-show {
-                .carrousel-div-center,
-                .carrousel-div-left,
-                .carrousel-div-right {
-                    img {
-                        width: $img_width;
-                        height: $img_height;
-                    }
-                }
-                .carrousel-div-right {
-                    left: 100vw - $img_width;
-                }
-                .carrousel-div-left {
-                    margin-top: ($img_width*1.035)-$img_width;
-                }
-                .carrousel-div-center {
-                    left: 50vw-($new_img_width/2);
-                    img {
-                        width: $new_img_width;
-                        height: $new_img_height;
-                    }
-                }
-            }
-            .arrow-right,
-            .arrow-left {
-                i {
-                    width: $arrow_width;
-                    height: $arrow_width;
-                    top: ($new_img_height/2) - ($arrow_width/2);
-                    background-size: $arrow_width $arrow_width;
-                }
-            }
-            .arrow-left {
-                left: 50vw -($new_img_width/2);
-                i {
-                    background-image: url(../img/arrow-left.svg);
-                }
-            }
-            .arrow-right {
-                left: 50vw + ($new_img_width/2) -$arrow_width;
-                i {
-                    background-image: url(../img/arrow-right.svg);
-                }
-            }
-        }
-    }
-    //Section: Traveling
-    #pacificosta_traveling-with {
-        .pacificosta-show_traveling {
-            margin-top: 3vh;
-        }
-        .pacificosta_traveling-box {
-            $img_w: 95vw/2;
-            height: $img_w;
-            h4 {
-                top: -$img_w/2*1.15;
-            }
-        }
-    }
-    //Footer
-    footer {
-        background-color: $color-1;
-        color: aliceblue;
-        margin-bottom: -3vh;
-        text-align: center;
-        img {
-            width: 12vw;
-            margin: 2vh auto 0 auto;
-        }
-    }
-}
 
-@media screen and (min-width: 1000px) {
-    .section-title-1 {
-        margin: 6vh auto 0 auto;
-        font-size: 3.5vw;
-        font-weight: 750;
-    }
-    .section-title-2 {
-        margin: 0 auto 4vh auto;
-        font-size: 2vw;
-    }
-    .intro-information {
-        text-align: center;
-        height: 100vh;
-        img {
-            margin-top: 25vh;
-            width: 30vw;
-        }
-        h2 {
-            color: aliceblue;
-            font-weight: 730;
-            font-size: 5.5vw;
-        }
-    }
-    .pacificosta-navbar-1 {
-        height: 15vh;
-        box-shadow: none;
-        background-color: transparent;
-        img {
-            width: 35vw;
-            margin-top: 2vh;
-            margin-left: 3vw;
-        }
-    }
-    .pacificosta-navbar-2 {
-        height: 10vh;
-        box-shadow: none;
-        background-color: $color-1;
-        img {
-            width: 15vw;
-            margin-top: 1vh;
-            margin-left: 2vw;
-        }
-    }
-    //Section: Come to Ecuador
-    #pacificosta_come-to-Ecuador {
-        $img_width: 60vw;
-        $img_height: $img_width*0.6;
-        $new_img_width: $img_width*1.2;
-        $new_img_height: $img_height*1.1;
-        $arrow_width: $img_height/6;
-        height: $new_img_height*1.45;
-        #pacificosta_carrousel {
-            .imgs-to-show {
-                .carrousel-div-center,
-                .carrousel-div-left,
-                .carrousel-div-right {
-                    img {
-                        width: $img_width;
-                        height: $img_height;
-                    }
-                }
-                .carrousel-div-right {
-                    left: 100vw - $img_width;
-                }
-                .carrousel-div-left {
-                    margin-top: ($img_width*1.035)-$img_width;
-                }
-                .carrousel-div-center {
-                    left: 50vw-($new_img_width/2);
-                    img {
-                        width: $new_img_width;
-                        height: $new_img_height;
-                    }
-                }
-            }
-            .arrow-right,
-            .arrow-left {
-                i {
-                    width: $arrow_width;
-                    height: $arrow_width;
-                    top: ($new_img_height/2) - ($arrow_width/2);
-                    background-size: $arrow_width $arrow_width;
-                }
-            }
-            .arrow-left {
-                left: 50vw -($new_img_width/2);
-                i {
-                    background-image: url(../img/arrow-left.svg);
-                }
-            }
-            .arrow-right {
-                left: 50vw + ($new_img_width/2) -$arrow_width;
-                i {
-                    background-image: url(../img/arrow-right.svg);
-                }
-            }
-        }
-    }
-    //Section: Traveling
-    #pacificosta_traveling-with {
-        .pacificosta-show_traveling {
-            margin-top: 3vh;
-        }
-        .pacificosta_traveling-box {
-            $img_w: 95vw/2;
-            height: $img_w;
-            h4 {
-                top: -$img_w/2*1.15;
-            }
-        }
-    }
-    //Footer
-    footer {
-        img {
-            width: 8vw;
-            margin: 2vh auto 0 auto;
-        }
-    }
-}
+/* An optional height of the navbar AFTER scroll */
 
-@media screen and (min-width: 1200px) {
-    .section-title-1 {
-        margin: 6vh auto 0 auto;
-        font-size: 2.5vw;
-        font-weight: 750;
-    }
-    .section-title-2 {
-        margin: 0 auto 4vh auto;
-        font-size: 1.5vw;
-    }
-    .intro-information {
-        text-align: center;
-        height: 100vh;
-        img {
-            margin-top: 25vh;
-            width: 25vw;
-        }
-        h2 {
-            color: aliceblue;
-            font-weight: 730;
-            font-size: 4.5vw;
-        }
-    }
-    .pacificosta-navbar-1 {
-        height: 15vh;
-        box-shadow: none;
-        background-color: transparent;
-        img {
-            width: 35vw;
-            margin-top: 2vh;
-            margin-left: 3vw;
-        }
-    }
-    .pacificosta-navbar-2 {
-        height: 10vh;
-        box-shadow: none;
-        background-color: $color-1;
-        img {
-            width: 15vw;
-            margin-top: 1vh;
-            margin-left: 2vw;
-        }
-    }
-    //Footer
-    footer {
-        img {
-            width: 5vw;
-            margin: 2vh auto 0 auto;
-        }
-    }
+.navbar.navbar-scroll.navbar-scrolled {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
