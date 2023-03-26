@@ -5,9 +5,9 @@ body {
 }
 
 .pacificosta-navbar-brand {
-    width: 10vw;
+    width: 8em;
     color: #fff;
-    filter: invert(100%) sepia(79%) saturate(0%) hue-rotate(86deg) brightness(118%) contrast(119%);
+    // filter: invert(100%) sepia(79%) saturate(0%) hue-rotate(86deg) brightness(118%) contrast(119%);
 }
 
 .pacificosta-color-1 {
@@ -99,6 +99,13 @@ body {
             font-weight: 700;
         }
     }
+    .navbar-toggler-icon {
+        width: 2.5em;
+        height: 2.5em;
+        img {
+            width: 100%;
+        }
+    }
 }
 
 #pacificosta-hero {
@@ -107,11 +114,22 @@ body {
         img {
             object-fit: cover;
             width: 100%;
+            height: 100%;
         }
         .carousel-caption {
             img {
-                width: 70vw;
+                width: 100%;
+                max-height: 80vh;
+                object-fit: contain;
             }
+        }
+    }
+    .phone-carousel-caption {
+        position: absolute;
+        bottom: 40vh;
+        img {
+            width: 80%;
+            margin-left: 10%;
         }
     }
 }

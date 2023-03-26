@@ -3,10 +3,8 @@ body {
 }
 
 .pacificosta-navbar-brand {
-  width: 10vw;
+  width: 8em;
   color: #fff;
-  -webkit-filter: invert(100%) sepia(79%) saturate(0%) hue-rotate(86deg) brightness(118%) contrast(119%);
-          filter: invert(100%) sepia(79%) saturate(0%) hue-rotate(86deg) brightness(118%) contrast(119%);
 }
 
 .pacificosta-color-1 {
@@ -114,6 +112,15 @@ body {
   font-weight: 700;
 }
 
+#pacificosta-navbar .navbar-toggler-icon {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#pacificosta-navbar .navbar-toggler-icon img {
+  width: 100%;
+}
+
 #pacificosta-hero .carousel-item {
   height: 100vh;
 }
@@ -122,10 +129,24 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 
 #pacificosta-hero .carousel-item .carousel-caption img {
-  width: 70vw;
+  width: 100%;
+  max-height: 80vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#pacificosta-hero .phone-carousel-caption {
+  position: absolute;
+  bottom: 40vh;
+}
+
+#pacificosta-hero .phone-carousel-caption img {
+  width: 80%;
+  margin-left: 10%;
 }
 
 #pacificosta-promotions {
