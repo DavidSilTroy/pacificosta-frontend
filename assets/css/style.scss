@@ -4,93 +4,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.pacificosta-navbar-brand {
-    width: 8em;
-    color: #fff;
-    // filter: invert(100%) sepia(79%) saturate(0%) hue-rotate(86deg) brightness(118%) contrast(119%);
-}
-
-.pacificosta-color-1 {
-    color: #162944;
-}
-
-.pacificosta-color-2 {
-    color: #009877;
-}
-
-.pacificosta-bg-color-1 {
-    background-color: #162944;
-    color: #fff;
-}
-
-.pacificosta-bg-color-2 {
-    background-color: #009877;
-    color: #fff;
-}
-
-.pacificosta-card-text {
-    display: flex;
-    align-items: center;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        width: fit-content;
-    }
-    p {
-        margin-left: auto;
-        a {
-            text-decoration: none;
-            color: #fff;
-        }
-    }
-}
-
-.btn-outline-primary {
-    color: #009877;
-    border-color: #009877;
-    &:hover {
-        color: #fff;
-        background-color: #009877;
-        border-color: #009877;
-    }
-}
-
-.btn-outline-white {
-    color: #fff;
-    border-color: #fff;
-    &:hover {
-        color: #009877 !important;
-        background-color: #fff;
-        border-color: #fff;
-    }
-}
-
-.btn-lines {
-    overflow: hidden;
-    span {
-        position: relative;
-        display: inline-block;
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            border-bottom: 0.3em solid;
-            border-color: #009877;
-            width: 100vw;
-            margin: 0 20px;
-        }
-        &::before {
-            right: 100%;
-        }
-        &::after {
-            left: 100%;
-        }
-    }
-}
-
 #pacificosta-navbar {
     transition: background-color 0.2s ease-out;
     ul {
@@ -99,11 +12,20 @@ body {
             font-weight: 700;
         }
     }
-    .navbar-toggler-icon {
+    .navbar-toggler {
         width: 2.5em;
         height: 2.5em;
-        img {
+        padding: 0;
+        border-radius: 50%;
+        .navbar-toggler-icon {
             width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        &:focus {
+            box-shadow: #fff 0 0 0.25rem;
         }
     }
 }
@@ -139,15 +61,11 @@ body {
     padding-right: 5vw;
     .pacificosta-panel {
         $margin_in_x: 8vw;
-        $color-for-border: #009877;
-        $vertical-border-height: 6em;
         $img-width: 40vw;
         $top-space: 10vh;
         margin: $margin_in_x 0 $margin_in_x 0;
         padding: 1vh;
         padding-top: $top-space;
-        border-top: 5px solid $color-for-border;
-        border-bottom: 5px solid $color-for-border;
         position: relative;
         height: ($img-width*1.06);
         // border-radius: 5px;
@@ -205,22 +123,6 @@ body {
                     z-index: 3;
                 }
             }
-            &:before {
-                position: absolute;
-                content: '';
-                top: 0;
-                left: 0;
-                height: $vertical-border-height;
-                border-left: 5px solid $color-for-border;
-            }
-            &:after {
-                position: absolute;
-                content: '';
-                top: 0;
-                right: 0;
-                height: $vertical-border-height;
-                border-left: 5px solid $color-for-border;
-            }
         }
         .panel-control {
             ul {
@@ -265,22 +167,6 @@ body {
                     }
                 }
             }
-            &:before {
-                position: absolute;
-                content: '';
-                bottom: 0;
-                left: 0;
-                height: $vertical-border-height;
-                border-left: 5px solid $color-for-border;
-            }
-            &:after {
-                position: absolute;
-                content: '';
-                bottom: 0;
-                right: 0;
-                height: $vertical-border-height;
-                border-left: 5px solid $color-for-border;
-            }
         }
     }
 }
@@ -294,10 +180,10 @@ body {
 
 #pacificosta-contact-us {
     background-image: url("../img/contact_us-bg.png");
-    padding: 10vh 15vw 10vh 15vw;
+    // padding: 10vh 15vw 10vh 15vw;
     .pacificosta-card-contact {
         border: #fff solid;
-        padding: 5vh 1.5vw 5vh 1.5vw;
+        // padding: 5vh 1.5vw 5vh 1.5vw;
         background: hsla(0, 0%, 100%, 0.055);
         backdrop-filter: blur(0.5em);
     }
@@ -356,4 +242,166 @@ body {
 .navbar.navbar-scroll.navbar-scrolled {
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+
+/* decorations */
+
+.pacificosta-border-box-1 {
+    position: relative;
+    $vertical-border-height: 6em;
+    $color-for-border: #009877;
+    border-top: 5px solid $color-for-border;
+    border-bottom: 5px solid $color-for-border;
+    &:before {
+        z-index: 0;
+        position: absolute;
+        content: '';
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: $vertical-border-height;
+        border-left: 5px solid $color-for-border;
+        border-right: 5px solid $color-for-border;
+    }
+    &:after {
+        z-index: 0;
+        position: absolute;
+        content: '';
+        width: 100%;
+        top: 0;
+        right: 0;
+        height: $vertical-border-height;
+        border-left: 5px solid $color-for-border;
+        border-right: 5px solid $color-for-border;
+    }
+}
+
+.pacificosta-border-box-2 {
+    position: relative;
+    $horizontal-border-height: 6em;
+    $color-for-border: #009877;
+    border-left: 5px solid $color-for-border;
+    border-right: 5px solid $color-for-border;
+    &:before {
+        z-index: 0;
+        position: absolute;
+        content: '';
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        border-bottom: 5px solid $color-for-border;
+        border-top: 5px solid $color-for-border;
+        width: $horizontal-border-height;
+    }
+    &:after {
+        z-index: 0;
+        position: absolute;
+        content: '';
+        height: 100%;
+        top: 0;
+        right: 0;
+        border-bottom: 5px solid $color-for-border;
+        border-top: 5px solid $color-for-border;
+        width: $horizontal-border-height;
+    }
+}
+
+.pacificosta-navbar-brand {
+    width: 8em;
+    color: #fff;
+    // filter: invert(100%) sepia(79%) saturate(0%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+.pacificosta-color-1 {
+    color: #162944;
+}
+
+.pacificosta-color-2 {
+    color: #009877;
+}
+
+.pacificosta-bg-color-1 {
+    background-color: #162944;
+    color: #fff;
+}
+
+.pacificosta-bg-color-2 {
+    background-color: #009877;
+    color: #fff;
+}
+
+.pacificosta-card-text {
+    display: flex;
+    align-items: center;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        width: fit-content;
+    }
+    p {
+        margin-left: auto;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+.btn-primary {
+    color: #009877;
+    background-color: #009877;
+    border-color: #009877;
+    color: #fff;
+    &:hover {
+        color: #fff;
+        background-color: #162944;
+        border-color: #162944;
+    }
+}
+
+.btn-outline-primary {
+    color: #009877;
+    border-color: #009877;
+    &:hover {
+        color: #fff;
+        background-color: #009877;
+        border-color: #009877;
+    }
+}
+
+.btn-outline-white {
+    color: #fff;
+    border-color: #fff;
+    &:hover {
+        color: #009877 !important;
+        background-color: #fff;
+        border-color: #fff;
+    }
+}
+
+.btn-lines {
+    overflow: hidden;
+    span {
+        position: relative;
+        display: inline-block;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            border-bottom: 0.3em solid;
+            border-color: #009877;
+            width: 100vw;
+            margin: 0 20px;
+        }
+        &::before {
+            right: 100%;
+        }
+        &::after {
+            left: 100%;
+        }
+    }
 }

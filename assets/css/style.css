@@ -2,106 +2,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.pacificosta-navbar-brand {
-  width: 8em;
-  color: #fff;
-}
-
-.pacificosta-color-1 {
-  color: #162944;
-}
-
-.pacificosta-color-2 {
-  color: #009877;
-}
-
-.pacificosta-bg-color-1 {
-  background-color: #162944;
-  color: #fff;
-}
-
-.pacificosta-bg-color-2 {
-  background-color: #009877;
-  color: #fff;
-}
-
-.pacificosta-card-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.pacificosta-card-text h1,
-.pacificosta-card-text h2,
-.pacificosta-card-text h3,
-.pacificosta-card-text h4,
-.pacificosta-card-text h5 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.pacificosta-card-text p {
-  margin-left: auto;
-}
-
-.pacificosta-card-text p a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.btn-outline-primary {
-  color: #009877;
-  border-color: #009877;
-}
-
-.btn-outline-primary:hover {
-  color: #fff;
-  background-color: #009877;
-  border-color: #009877;
-}
-
-.btn-outline-white {
-  color: #fff;
-  border-color: #fff;
-}
-
-.btn-outline-white:hover {
-  color: #009877 !important;
-  background-color: #fff;
-  border-color: #fff;
-}
-
-.btn-lines {
-  overflow: hidden;
-}
-
-.btn-lines span {
-  position: relative;
-  display: inline-block;
-}
-
-.btn-lines span::before, .btn-lines span::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  border-bottom: 0.3em solid;
-  border-color: #009877;
-  width: 100vw;
-  margin: 0 20px;
-}
-
-.btn-lines span::before {
-  right: 100%;
-}
-
-.btn-lines span::after {
-  left: 100%;
-}
-
 #pacificosta-navbar {
   -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
@@ -112,13 +12,25 @@ body {
   font-weight: 700;
 }
 
-#pacificosta-navbar .navbar-toggler-icon {
+#pacificosta-navbar .navbar-toggler {
   width: 2.5em;
   height: 2.5em;
+  padding: 0;
+  border-radius: 50%;
 }
 
-#pacificosta-navbar .navbar-toggler-icon img {
+#pacificosta-navbar .navbar-toggler .navbar-toggler-icon {
   width: 100%;
+  height: 100%;
+}
+
+#pacificosta-navbar .navbar-toggler .navbar-toggler-icon img {
+  width: 100%;
+}
+
+#pacificosta-navbar .navbar-toggler:focus {
+  -webkit-box-shadow: #fff 0 0 0.25rem;
+          box-shadow: #fff 0 0 0.25rem;
 }
 
 #pacificosta-hero .carousel-item {
@@ -158,8 +70,6 @@ body {
   margin: 8vw 0 8vw 0;
   padding: 1vh;
   padding-top: 10vh;
-  border-top: 5px solid #009877;
-  border-bottom: 5px solid #009877;
   position: relative;
   height: 42.4vw;
 }
@@ -230,24 +140,6 @@ body {
   z-index: 3;
 }
 
-#pacificosta-promotions .pacificosta-panel .panel-images:before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  height: 6em;
-  border-left: 5px solid #009877;
-}
-
-#pacificosta-promotions .pacificosta-panel .panel-images:after {
-  position: absolute;
-  content: '';
-  top: 0;
-  right: 0;
-  height: 6em;
-  border-left: 5px solid #009877;
-}
-
 #pacificosta-promotions .pacificosta-panel .panel-control ul {
   position: absolute;
   width: 100%;
@@ -298,24 +190,6 @@ body {
   height: 1em;
 }
 
-#pacificosta-promotions .pacificosta-panel .panel-control:before {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  left: 0;
-  height: 6em;
-  border-left: 5px solid #009877;
-}
-
-#pacificosta-promotions .pacificosta-panel .panel-control:after {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  right: 0;
-  height: 6em;
-  border-left: 5px solid #009877;
-}
-
 #pacificosta-tours h2,
 #pacificosta-tours h4 {
   font-weight: 700;
@@ -323,12 +197,10 @@ body {
 
 #pacificosta-contact-us {
   background-image: url("../img/contact_us-bg.png");
-  padding: 10vh 15vw 10vh 15vw;
 }
 
 #pacificosta-contact-us .pacificosta-card-contact {
   border: #fff solid;
-  padding: 5vh 1.5vw 5vh 1.5vw;
   background: rgba(255, 255, 255, 0.055);
   -webkit-backdrop-filter: blur(0.5em);
           backdrop-filter: blur(0.5em);
@@ -382,5 +254,179 @@ body {
 .navbar.navbar-scroll.navbar-scrolled {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+/* decorations */
+.pacificosta-border-box-1 {
+  position: relative;
+  border-top: 5px solid #009877;
+  border-bottom: 5px solid #009877;
+}
+
+.pacificosta-border-box-1:before {
+  z-index: 0;
+  position: absolute;
+  content: '';
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 6em;
+  border-left: 5px solid #009877;
+  border-right: 5px solid #009877;
+}
+
+.pacificosta-border-box-1:after {
+  z-index: 0;
+  position: absolute;
+  content: '';
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 6em;
+  border-left: 5px solid #009877;
+  border-right: 5px solid #009877;
+}
+
+.pacificosta-border-box-2 {
+  position: relative;
+  border-left: 5px solid #009877;
+  border-right: 5px solid #009877;
+}
+
+.pacificosta-border-box-2:before {
+  z-index: 0;
+  position: absolute;
+  content: '';
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 5px solid #009877;
+  border-top: 5px solid #009877;
+  width: 6em;
+}
+
+.pacificosta-border-box-2:after {
+  z-index: 0;
+  position: absolute;
+  content: '';
+  height: 100%;
+  top: 0;
+  right: 0;
+  border-bottom: 5px solid #009877;
+  border-top: 5px solid #009877;
+  width: 6em;
+}
+
+.pacificosta-navbar-brand {
+  width: 8em;
+  color: #fff;
+}
+
+.pacificosta-color-1 {
+  color: #162944;
+}
+
+.pacificosta-color-2 {
+  color: #009877;
+}
+
+.pacificosta-bg-color-1 {
+  background-color: #162944;
+  color: #fff;
+}
+
+.pacificosta-bg-color-2 {
+  background-color: #009877;
+  color: #fff;
+}
+
+.pacificosta-card-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pacificosta-card-text h1,
+.pacificosta-card-text h2,
+.pacificosta-card-text h3,
+.pacificosta-card-text h4,
+.pacificosta-card-text h5 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.pacificosta-card-text p {
+  margin-left: auto;
+}
+
+.pacificosta-card-text p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-primary {
+  color: #009877;
+  background-color: #009877;
+  border-color: #009877;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #162944;
+  border-color: #162944;
+}
+
+.btn-outline-primary {
+  color: #009877;
+  border-color: #009877;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #009877;
+  border-color: #009877;
+}
+
+.btn-outline-white {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-white:hover {
+  color: #009877 !important;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-lines {
+  overflow: hidden;
+}
+
+.btn-lines span {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-lines span::before, .btn-lines span::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-bottom: 0.3em solid;
+  border-color: #009877;
+  width: 100vw;
+  margin: 0 20px;
+}
+
+.btn-lines span::before {
+  right: 100%;
+}
+
+.btn-lines span::after {
+  left: 100%;
 }
 /*# sourceMappingURL=style.css.map */
