@@ -10,6 +10,7 @@ body {
 #pacificosta-navbar ul li {
   margin-left: 5vw;
   font-weight: 700;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 #pacificosta-navbar .navbar-toggler {
@@ -234,6 +235,39 @@ body {
   padding-right: 1.5vw;
 }
 
+#pacificosta-tours-hero .carousel-item {
+  height: 50vh;
+  position: relative;
+}
+
+#pacificosta-tours-hero .carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#pacificosta-tours-hero .carousel-item .carousel-caption {
+  position: absolute;
+  bottom: 50%;
+  top: 40%;
+}
+
+#pacificosta-tours-hero .carousel-item .carousel-caption h1 {
+  font-weight: 700;
+  font-size: 3em;
+}
+
+#pacificosta-tours-hero .phone-carousel-caption {
+  position: absolute;
+  bottom: 40vh;
+}
+
+#pacificosta-tours-hero .phone-carousel-caption img {
+  width: 80%;
+  margin-left: 10%;
+}
+
 .navbar-scroll .nav-link,
 .navbar-scroll .navbar-toggler .fa-bars {
   color: #fff;
@@ -317,6 +351,17 @@ body {
   width: 6em;
 }
 
+@media only screen and (max-width: 600px) {
+  .pacificosta-border-box-2 div {
+    overflow: scroll;
+  }
+  .pacificosta-border-box-2 div .row {
+    width: 220vw;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+}
+
 .pacificosta-navbar-brand {
   width: 8em;
   color: #fff;
@@ -340,7 +385,7 @@ body {
   color: #fff;
 }
 
-.pacificosta-card-text {
+.pacificosta-card-text-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,23 +394,48 @@ body {
           align-items: center;
 }
 
-.pacificosta-card-text h1,
-.pacificosta-card-text h2,
-.pacificosta-card-text h3,
-.pacificosta-card-text h4,
-.pacificosta-card-text h5 {
+.pacificosta-card-text-1 h1,
+.pacificosta-card-text-1 h2,
+.pacificosta-card-text-1 h3,
+.pacificosta-card-text-1 h4,
+.pacificosta-card-text-1 h5 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.pacificosta-card-text p {
+.pacificosta-card-text-1 p {
   margin-left: auto;
 }
 
-.pacificosta-card-text p a {
+.pacificosta-card-text-1 p a {
   text-decoration: none;
   color: #fff;
+}
+
+.pacificosta-card-text-2 {
+  position: relative;
+}
+
+.pacificosta-card-text-2 h1 {
+  font-weight: 600;
+}
+
+.pacificosta-card-text-2 h3 {
+  font-weight: 300 !important;
+}
+
+.pacificosta-card-text-2 h4 {
+  font-weight: 400 !important;
+  color: #009877;
+}
+
+.pacificosta-card-text-2 a {
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .btn-primary {

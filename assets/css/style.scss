@@ -10,6 +10,7 @@ body {
         li {
             margin-left: 5vw;
             font-weight: 700;
+            text-shadow: 2px 2px 4px #000000;
         }
     }
     .navbar-toggler {
@@ -215,6 +216,35 @@ body {
     }
 }
 
+#pacificosta-tours-hero {
+    .carousel-item {
+        height: 50vh;
+        position: relative;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-caption {
+            position: absolute;
+            bottom: 50%;
+            top: 40%;
+            h1 {
+                font-weight: 700;
+                font-size: 3em;
+            }
+        }
+    }
+    .phone-carousel-caption {
+        position: absolute;
+        bottom: 40vh;
+        img {
+            width: 80%;
+            margin-left: 10%;
+        }
+    }
+}
+
 //Another code
 .navbar-scroll .nav-link,
 .navbar-scroll .navbar-toggler .fa-bars {
@@ -305,6 +335,16 @@ body {
         border-top: 5px solid $color-for-border;
         width: $horizontal-border-height;
     }
+    @media only screen and (max-width: 600px) {
+        div {
+            overflow: scroll;
+            .row {
+                width: 220vw;
+                overflow-x: scroll;
+                white-space: nowrap; // Esta propiedad es opcional y evita que las imágenes se ajusten automáticamente
+            }
+        }
+    }
 }
 
 .pacificosta-navbar-brand {
@@ -331,7 +371,7 @@ body {
     color: #fff;
 }
 
-.pacificosta-card-text {
+.pacificosta-card-text-1 {
     display: flex;
     align-items: center;
     h1,
@@ -347,6 +387,27 @@ body {
             text-decoration: none;
             color: #fff;
         }
+    }
+}
+
+.pacificosta-card-text-2 {
+    position: relative;
+    h1 {
+        font-weight: 600;
+    }
+    h3 {
+        font-weight: 300 !important;
+    }
+    h4 {
+        font-weight: 400 !important;
+        color: #009877;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        bottom: 0;
     }
 }
 
