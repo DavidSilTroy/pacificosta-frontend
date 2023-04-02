@@ -212,24 +212,6 @@ body {
 }
 
 #pacificosta-tours-hero {
-    .carousel-item {
-        height: 50vh;
-        position: relative;
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-        .carousel-caption {
-            position: absolute;
-            bottom: 50%;
-            top: 40%;
-            h1 {
-                font-weight: 700;
-                font-size: 3em;
-            }
-        }
-    }
     .phone-carousel-caption {
         position: absolute;
         bottom: 40vh;
@@ -258,6 +240,33 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+.pacificosta-carousel-hero-simple{
+    .carousel-item {
+        height: 50vh;
+        position: relative;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-caption {
+            position: absolute;
+            bottom: 50%;
+            top: 40%;
+            h1 {
+                font-weight: 700;
+                font-size: 3em;
+            }
+        }
+    }
+}
+.pacificosta-img-fit{
+    img{
+        object-fit: cover;
+        width: 100% !important;
+        height: 100%;
     }
 }
 .pacificosta-logo-img{
