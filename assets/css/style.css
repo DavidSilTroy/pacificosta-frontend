@@ -1,62 +1,51 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 #pacificosta-navbar {
-  -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
 }
-
 #pacificosta-navbar ul li {
   margin-left: 5vw;
   font-weight: 700;
   text-shadow: 2px 2px 4px #000000;
 }
-
 #pacificosta-navbar .navbar-toggler {
   width: 2.5em;
   height: 2.5em;
   padding: 0;
   border-radius: 50%;
 }
-
 #pacificosta-navbar .navbar-toggler .navbar-toggler-icon {
   width: 100%;
   height: 100%;
 }
-
 #pacificosta-navbar .navbar-toggler .navbar-toggler-icon img {
   width: 100%;
 }
-
 #pacificosta-navbar .navbar-toggler:focus {
-  -webkit-box-shadow: #fff 0 0 0.25rem;
-          box-shadow: #fff 0 0 0.25rem;
+  box-shadow: #fff 0 0 0.25rem;
 }
 
 #pacificosta-hero .carousel-item {
   height: 100vh;
 }
-
 #pacificosta-hero .carousel-item img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
 }
-
 #pacificosta-hero .carousel-item .carousel-caption img {
   width: 100%;
   max-height: 80vh;
   -o-object-fit: contain;
      object-fit: contain;
 }
-
 #pacificosta-hero .phone-carousel-caption {
   position: absolute;
   bottom: 40vh;
 }
-
 #pacificosta-hero .phone-carousel-caption img {
   width: 80%;
   margin-left: 10%;
@@ -66,7 +55,6 @@ body {
   padding-left: 5vw;
   padding-right: 5vw;
 }
-
 #pacificosta-promotions .pacificosta-panel {
   margin: 8vw 0 8vw 0;
   padding: 1vh;
@@ -74,27 +62,22 @@ body {
   position: relative;
   height: 42.4vw;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-images {
   height: 24vw;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel {
   background-color: #4f4f4f;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
   position: relative;
   width: 40vw;
   height: 32vw;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel .pacificosta-promotion-information {
   width: 80%;
   margin-left: 10%;
@@ -105,42 +88,35 @@ body {
   color: #fff;
   border: #fff solid 0.1em;
   border-radius: 0.3em;
-  background: rgba(41, 41, 41, 0.089);
+  background: hsla(0, 0%, 16%, 0.089);
   -webkit-backdrop-filter: blur(0.5em);
           backdrop-filter: blur(0.5em);
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel .pacificosta-promotion-information h2 {
   font-weight: 700;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel .pacificosta-promotion-information h2,
 #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel .pacificosta-promotion-information p {
   text-shadow: 0 0 1px #000;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel:nth-of-type(3), #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel:first-of-type {
   position: absolute;
   z-index: 1;
   top: 10vh;
   scale: 0.8;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel:nth-of-type(3) {
   left: 55%;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel:first-of-type {
   right: 55%;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-images .pacificosta-promotion-in-panel:nth-of-type(2) {
   scale: 1;
   position: relative;
   margin: auto;
   z-index: 3;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-control ul {
   position: absolute;
   width: 100%;
@@ -148,12 +124,10 @@ body {
   bottom: 0;
   list-style: none;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-control ul li {
   display: inline;
   margin-inline: 0.5em;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-control ul li a.panel-option,
 #pacificosta-promotions .pacificosta-panel .panel-control ul li a.panel-option-selected {
   border: solid;
@@ -161,11 +135,9 @@ body {
   border-radius: 50%;
   display: inline-block;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-control ul li a.panel-option-selected {
   background-color: #009877;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-control ul li a.btn-show-left-option,
 #pacificosta-promotions .pacificosta-panel .panel-control ul li a.btn-show-right-option {
   cursor: pointer;
@@ -176,15 +148,12 @@ body {
   border-bottom: 0.5em solid transparent;
   display: inline-block;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-control ul li a.btn-show-left-option {
   border-right: 0.8em solid #009877;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-control ul li a.btn-show-right-option {
   border-left: 0.8em solid #009877;
 }
-
 #pacificosta-promotions .pacificosta-panel .panel-control ul li a {
   text-decoration: none;
   width: 1em;
@@ -199,14 +168,6 @@ body {
 #pacificosta-contact-us {
   background-image: url("../img/contact_us-bg.png");
 }
-
-#pacificosta-contact-us .pacificosta-card-contact {
-  border: #fff solid;
-  background: rgba(255, 255, 255, 0.055);
-  -webkit-backdrop-filter: blur(0.5em);
-          backdrop-filter: blur(0.5em);
-}
-
 #pacificosta-contact-us h1,
 #pacificosta-contact-us h2,
 #pacificosta-contact-us h3,
@@ -214,16 +175,13 @@ body {
   color: #fff;
   font-weight: 700;
 }
-
 #pacificosta-contact-us ul {
   list-style: none;
 }
-
 #pacificosta-contact-us ul li {
   color: #fff;
   margin-top: 2vh;
 }
-
 #pacificosta-contact-us ul li a {
   text-decoration: none;
   color: #fff;
@@ -239,33 +197,49 @@ body {
   height: 50vh;
   position: relative;
 }
-
 #pacificosta-tours-hero .carousel-item img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
 }
-
 #pacificosta-tours-hero .carousel-item .carousel-caption {
   position: absolute;
   bottom: 50%;
   top: 40%;
 }
-
 #pacificosta-tours-hero .carousel-item .carousel-caption h1 {
   font-weight: 700;
   font-size: 3em;
 }
-
 #pacificosta-tours-hero .phone-carousel-caption {
   position: absolute;
   bottom: 40vh;
 }
-
 #pacificosta-tours-hero .phone-carousel-caption img {
   width: 80%;
   margin-left: 10%;
+}
+
+#pacificosta-about_us-hero .row {
+  position: relative;
+}
+
+.pacificosta-container-bg {
+  position: absolute;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+}
+.pacificosta-container-bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pacificosta-logo-img img {
+  width: 60% !important;
 }
 
 .navbar-scroll .nav-link,
@@ -296,11 +270,10 @@ body {
   border-top: 5px solid #009877;
   border-bottom: 5px solid #009877;
 }
-
 .pacificosta-border-box-1:before {
   z-index: 0;
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   bottom: 0;
   left: 0;
@@ -308,11 +281,10 @@ body {
   border-left: 5px solid #009877;
   border-right: 5px solid #009877;
 }
-
 .pacificosta-border-box-1:after {
   z-index: 0;
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   top: 0;
   right: 0;
@@ -326,11 +298,10 @@ body {
   border-left: 5px solid #009877;
   border-right: 5px solid #009877;
 }
-
 .pacificosta-border-box-2:before {
   z-index: 0;
   position: absolute;
-  content: '';
+  content: "";
   height: 100%;
   bottom: 0;
   left: 0;
@@ -338,11 +309,10 @@ body {
   border-top: 5px solid #009877;
   width: 6em;
 }
-
 .pacificosta-border-box-2:after {
   z-index: 0;
   position: absolute;
-  content: '';
+  content: "";
   height: 100%;
   top: 0;
   right: 0;
@@ -350,7 +320,6 @@ body {
   border-top: 5px solid #009877;
   width: 6em;
 }
-
 @media only screen and (max-width: 600px) {
   .pacificosta-border-box-2 div {
     overflow: scroll;
@@ -360,6 +329,14 @@ body {
     overflow-x: scroll;
     white-space: nowrap;
   }
+}
+
+.pacificosta-glass-card {
+  border: #fff solid;
+  background: hsla(0, 0%, 100%, 0.055);
+  -webkit-backdrop-filter: blur(0.5em);
+          backdrop-filter: blur(0.5em);
+  color: #fff;
 }
 
 .pacificosta-navbar-brand {
@@ -386,28 +363,20 @@ body {
 }
 
 .pacificosta-card-text-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .pacificosta-card-text-1 h1,
 .pacificosta-card-text-1 h2,
 .pacificosta-card-text-1 h3,
 .pacificosta-card-text-1 h4,
 .pacificosta-card-text-1 h5 {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-
 .pacificosta-card-text-1 p {
   margin-left: auto;
 }
-
 .pacificosta-card-text-1 p a {
   text-decoration: none;
   color: #fff;
@@ -416,20 +385,16 @@ body {
 .pacificosta-card-text-2 {
   position: relative;
 }
-
 .pacificosta-card-text-2 h1 {
   font-weight: 600;
 }
-
 .pacificosta-card-text-2 h3 {
   font-weight: 300 !important;
 }
-
 .pacificosta-card-text-2 h4 {
   font-weight: 400 !important;
   color: #009877;
 }
-
 .pacificosta-card-text-2 a {
   text-decoration: none;
   color: #fff;
@@ -444,7 +409,6 @@ body {
   border-color: #009877;
   color: #fff;
 }
-
 .btn-primary:hover {
   color: #fff;
   background-color: #162944;
@@ -455,7 +419,6 @@ body {
   color: #009877;
   border-color: #009877;
 }
-
 .btn-outline-primary:hover {
   color: #fff;
   background-color: #009877;
@@ -466,7 +429,6 @@ body {
   color: #fff;
   border-color: #fff;
 }
-
 .btn-outline-white:hover {
   color: #009877 !important;
   background-color: #fff;
@@ -476,14 +438,12 @@ body {
 .btn-lines {
   overflow: hidden;
 }
-
 .btn-lines span {
   position: relative;
   display: inline-block;
 }
-
 .btn-lines span::before, .btn-lines span::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   border-bottom: 0.3em solid;
@@ -491,12 +451,9 @@ body {
   width: 100vw;
   margin: 0 20px;
 }
-
 .btn-lines span::before {
   right: 100%;
 }
-
 .btn-lines span::after {
   left: 100%;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

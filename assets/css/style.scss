@@ -182,12 +182,7 @@ body {
 #pacificosta-contact-us {
     background-image: url("../img/contact_us-bg.png");
     // padding: 10vh 15vw 10vh 15vw;
-    .pacificosta-card-contact {
-        border: #fff solid;
-        // padding: 5vh 1.5vw 5vh 1.5vw;
-        background: hsla(0, 0%, 100%, 0.055);
-        backdrop-filter: blur(0.5em);
-    }
+    // aqui
     h1,
     h2,
     h3,
@@ -245,7 +240,33 @@ body {
     }
 }
 
+#pacificosta-about_us-hero {
+    .row{
+        position: relative;
+
+    }
+    
+}
+
 //Another code
+.pacificosta-container-bg{
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+    height: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.pacificosta-logo-img{
+    img{
+        width: 60% !important;
+    }
+}
+
+
 .navbar-scroll .nav-link,
 .navbar-scroll .navbar-toggler .fa-bars {
     color: #fff;
@@ -345,6 +366,13 @@ body {
             }
         }
     }
+}
+
+.pacificosta-glass-card {
+    border: #fff solid; 
+    background: hsla(0, 0%, 100%, 0.055);
+    backdrop-filter: blur(0.5em);
+    color: #fff;
 }
 
 .pacificosta-navbar-brand {
